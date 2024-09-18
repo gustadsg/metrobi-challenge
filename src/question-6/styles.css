@@ -1,0 +1,45 @@
+:root {
+    --achilles-position: 0;
+    --tortoise-position: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.runner {
+    width: 100%;
+    background-color: black;
+    color: white;
+
+    position: relative;
+    z-index: 0;
+}
+
+.runner::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 20%;
+}
+
+.runner--tortoise::after {
+    content: "tortoise";
+    background-color: orange;
+    width: var(--tortoise-position);
+    transition: all 1s linear;
+}
+
+.runner--achilles::after {
+    content: "achilles";
+    background-color: green;
+    width: var(--achilles-position);
+    transition: all 1s linear;
+}
