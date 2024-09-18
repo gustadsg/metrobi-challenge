@@ -1,5 +1,7 @@
 import React from "react";
 
+import './styles.css'
+
 export default function Layout() {
   return (
     <div className="layout">
