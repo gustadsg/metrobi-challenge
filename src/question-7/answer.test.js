@@ -1,7 +1,6 @@
 import { unboundedKnapsack } from "./answer";
 
-// Jest tests for unboundedKnapsack
-describe('unboundedKnapsack', () => {
+describe('Question 7', () => {
 test('should return max value and items for simple case', () => {
     const items = [
     { weight: 1, value: 1 },

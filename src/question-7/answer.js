@@ -47,3 +47,22 @@ export function unboundedKnapsack(items, totalCapacity) {
     
     return [dp[numLines-1][numCols-1],dpIncludedItems[numLines-1][numCols-1]]
 }
+
+export function getMaxValue(items, maxCapacity) {
+    const [bestValue, sac] = unboundedKnapsack(items.map(serialize), maxCapacity)
+    return [bestValue, sac.map(deserialize)]
+}
+
+function serialize(item) {
+    return {
+        weight: item.kg,
+        value: item.price
+    }
+}
+
+function deserialize(item) {
+    return {
+        kg: item.weight,
+        price: item.value
+    }
+}
