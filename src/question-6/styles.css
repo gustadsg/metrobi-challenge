@@ -28,18 +28,19 @@
     right: 0;
     height: 100%;
     width: 20%;
+    text-align: end;
 }
 
 .runner--tortoise::after {
-    content: "tortoise";
-    background-color: orange;
+    content: "🐢";
+    background-color: green;
     width: var(--tortoise-position);
     transition: all 1s linear;
 }
 
 .runner--achilles::after {
-    content: "achilles";
-    background-color: green;
+    content: "🏃🏾‍➡️";
+    background-color: orange;
     width: var(--achilles-position);
     transition: all 1s linear;
 }

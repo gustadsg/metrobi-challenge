@@ -282,11 +282,11 @@ export function twoEggsNFloors(arrayOfFloors) {
 </head>
 <body>
     <div class="container">
-        <div class="runner runner--tortoise" id="tortoise">tortoise</div>
-        <div class="runner runner--achilles" id="achilles">achilles</div>
+        <div class="runner runner--tortoise" id="tortoise">🐢 Tortoise</div>
+        <div class="runner runner--achilles" id="achilles">🏃🏾‍➡️ Achilles</div>
     </div>
 
-    <button type="button" onclick="startAnimation()" id="startAnimation">iniciar</button>
+    <button type="button" onclick="startAnimation()" id="startAnimation">Start</button>
 </body>
 </html>
 ```
@@ -410,18 +410,19 @@ function toggleButtonAvailability() {
     right: 0;
     height: 100%;
     width: 20%;
+    text-align: end;
 }
 
 .runner--tortoise::after {
-    content: "tortoise";
-    background-color: orange;
+    content: "🐢";
+    background-color: green;
     width: var(--tortoise-position);
     transition: all 1s linear;
 }
 
 .runner--achilles::after {
-    content: "achilles";
-    background-color: green;
+    content: "🏃🏾‍➡️";
+    background-color: orange;
     width: var(--achilles-position);
     transition: all 1s linear;
 }
